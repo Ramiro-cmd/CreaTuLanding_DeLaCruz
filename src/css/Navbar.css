@@ -1,0 +1,25 @@
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff513d;
+}
+
+.navbar img{
+    width: 7rem;
+    padding: .5rem 0 .5rem  2rem ;
+
+}
+.links-nav{
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+    
+}
+
+.links-nav a{
+    padding: 2rem;
+    text-decoration: none;
+    color: white;
+}
