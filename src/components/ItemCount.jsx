@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { CiCloudMoon } from "react-icons/ci";
 
 
 const ItemCount = ({stock, onAdd}) =>{
@@ -7,7 +6,7 @@ const ItemCount = ({stock, onAdd}) =>{
     const [count,setCount] = useState(1)
 
     const restar = () =>{
-        if(count> 0){
+        if(count> 1){
             setCount(count - 1)
         }
     }
@@ -21,13 +20,14 @@ const ItemCount = ({stock, onAdd}) =>{
     
 
     return(
+
         <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
             <div>
-                <button className='btn btn-danger' onClick={restar}>-</button>
+                <button className='btn btn-outline-danger' onClick={restar}>-</button>
                 <span  className='btn'>{count}</span>
-                <button className='btn btn-success' onClick={sumar}>+</button>
+                <button className='btn btn-outline-success' onClick={sumar}>+</button>
             </div>
-            <button className='btn btn-primary' onClick={()=>onAdd(count)} >Agregar al carrito</button>
+            <button className='btn btn-outline-primary' onClick={()=>onAdd(count)} >Agregar al carrito</button>
         </div>
     )
 }

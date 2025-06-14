@@ -1,0 +1,20 @@
+
+.btn-card{
+    border-color: #FF513D ;
+    color: #FF513D;
+}
+
+.btn-card:hover{
+    color: white    ;
+    border-color: #FFB86F;
+    background-color: #FFB86F;
+}
+
+.card-text{
+    color: #555555;
+}
+
+.price{
+    display: block;
+    padding-bottom: 1rem;
+}

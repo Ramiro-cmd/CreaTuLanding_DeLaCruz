@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import { RiShoppingCartLine } from "react-icons/ri";
+import { CartContext } from "../context/CartContext";
 
 const CartWidget = () =>{
+
+    const {cartQuantity} = useContext(CartContext)
+
     return(
         
-        <a href=""><RiShoppingCartLine />8</a>
+        <><RiShoppingCartLine />{cartQuantity()}</>
         
     )
 }
