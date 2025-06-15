@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const ItemCount = ({stock, onAdd}) =>{
+const ItemCount = ({stock, onAdd, talleVal}) =>{
 
     const [count,setCount] = useState(1)
 
@@ -17,6 +17,13 @@ const ItemCount = ({stock, onAdd}) =>{
         }
     }
     
+    const handleClick = () =>{
+        if(!talleVal){
+            alert("Selecciona un talle antes de agregar al carrito")
+            return
+        }
+        onAdd(count)
+    }
     
 
     return(
@@ -27,7 +34,7 @@ const ItemCount = ({stock, onAdd}) =>{
                 <span  className='btn'>{count}</span>
                 <button className='btn btn-outline-success' onClick={sumar}>+</button>
             </div>
-            <button className='btn btn-outline-primary' onClick={()=>onAdd(count)} >Agregar al carrito</button>
+            <button className='btn btn-outline-primary' onClick={handleClick} >Agregar al carrito</button>
         </div>
     )
 }

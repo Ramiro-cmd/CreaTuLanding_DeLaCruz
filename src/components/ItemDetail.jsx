@@ -10,11 +10,11 @@ const ItemDetail = ({detalle}) =>{
     const [compra,setCompra] = useState(false)
     const [talleSelec, setTalle] = useState(null)
     const talles = ["S","M","L","XL"]
-
+    
 
 
     const onAdd=(count)=>{
-        addItem(detalle, count)
+        addItem(detalle, count, talleSelec)
         setCompra(true)
         alert(`Se han añadido ${count} al carrito`)
     }
@@ -44,7 +44,7 @@ const ItemDetail = ({detalle}) =>{
                                 <Link to="/cart" className="btn">Ir al Carrito</Link>
 
                             </div>
-                            :<ItemCount stock={detalle.stock} onAdd={onAdd} />}
+                            :<ItemCount stock={detalle.stock} onAdd={onAdd} talleVal={talleSelec} />}
                             
                             
                         </div>

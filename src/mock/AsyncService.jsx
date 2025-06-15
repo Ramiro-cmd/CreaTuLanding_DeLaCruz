@@ -6,6 +6,7 @@ const products = [
         description: "Lorem ipsum lorem Lorem ipsum lorem ipsum lorem ipsum lorem Lorem ipsum lorem ipsum lorem",
         stock: 20,
         img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        // img:"https://acdn-us.mitiendanube.com/stores/102/392/products/foto-58-5e4f72cd3002e0739f17492172499548-1024-1024.jpg",
         category:"hombre"
     },
     {
