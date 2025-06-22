@@ -1,12 +1,33 @@
-# React + Vite
+# 🚀 CreaTuLanding_DeLaCruz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**CreaTuLanding_DeLaCruz** es una aplicación web moderna construida con React y Vite que permite crear una landing page de presentación visual atractiva, rápida y adaptable. El proyecto está pensado para ser reutilizable como base para distintos tipos de sitios web de promoción personal o comercial.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- ⚛️ [React 19](https://reactjs.org/) — Librería principal para la UI
+- ⚡ [Vite](https://vitejs.dev/) — Bundler ultrarrápido para desarrollo moderno
+- 🎨 [Bootstrap 5.3](https://getbootstrap.com/) — Framework CSS para diseño responsivo
+- 🔄 [React Router DOM](https://reactrouter.com/) — Manejo de rutas en SPA
+- 🌟 [React Icons](https://react-icons.github.io/react-icons/) — Biblioteca de íconos
+- ⏳ [React Spinners](https://www.davidhu.io/react-spinners/) — Indicadores de carga animados
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📦 Instalación
+
+Sigue estos pasos para clonar y correr el proyecto localmente:
+
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/Ramiro-cmd/CreaTuLanding_DeLaCruz.git
+
+# 2. Entra al directorio del proyecto
+cd CreaTuLanding_DeLaCruz
+
+# 3. Instala las dependencias
+npm install
+
+# 4. Inicia el servidor de desarrollo
+npm run dev

@@ -5,8 +5,15 @@ const ItemList = ({data}) =>{
 
 
     return(
-        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', padding:'2rem'}}>
-            {data.map((prod)=>(<Item key={prod.id} prod={prod} />))}
+        
+        <div className="container py-4">
+            <div className="row">
+                {data.map((prod) => (
+                <div key={prod.id} className="col-12 col-sm-6 col-md-4 mb-4">
+                    <Item prod={prod} />
+                </div>
+                ))}
+            </div>
         </div>
     )
 }
