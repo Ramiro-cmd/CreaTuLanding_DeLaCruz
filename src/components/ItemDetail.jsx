@@ -3,6 +3,9 @@ import ItemCount from "./ItemCount";
 
 import { CartContext } from "../context/CartContext";
 import { Link } from 'react-router-dom'
+import toast, {Toaster} from "react-hot-toast";
+
+
 const ItemDetail = ({detalle}) =>{
 
     const {addItem} = useContext(CartContext)
@@ -11,12 +14,12 @@ const ItemDetail = ({detalle}) =>{
     const [talleSelec, setTalle] = useState(null)
     const talles = ["S","M","L","XL"]
     
-
+    const notify = () => toast("prueba 123")
 
     const onAdd=(count)=>{
         addItem(detalle, count, talleSelec)
         setCompra(true)
-        alert(`Se han añadido ${count} al carrito`)
+        
     }
 
     return(//540px
@@ -36,12 +39,12 @@ const ItemDetail = ({detalle}) =>{
                             onClick={()=>setTalle(talle)} 
                             className={`me-3 ${talleSelec === talle? "btn btn-info": "btn btn-outline-info"}`}>
                                 {talle}</button>))}
-                            {detalle.category === "ofertas" && <span style={{display:"block", textDecoration:"line-through"}}>Precio: ${detalle.price}</span>}    
-                            <p style={{display:"block",color:`${detalle.category === "ofertas" && "#36B37E"}`}}>Precio: ${detalle.price - detalle.price * 0.2}</p>
+                            {detalle.category === "ofertas" && <span className="d-block text-decoration-line-through mt-2">Precio: ${detalle.price + 10000}</span>}    
+                            <span className="d-block mt-2" style={{color:`${detalle.category === "ofertas" && "#36B37E"}`}}>Precio: ${detalle.price}</span>
 
                             {compra? <div>
-                                <Link to="/" className="btn ">Seguir Comprando</Link>
-                                <Link to="/cart" className="btn">Ir al Carrito</Link>
+                                <Link to="/" className="btn btn-secondary m-2  ">Seguir Comprando</Link>
+                                <Link to="/cart" className="btn btn-success m-2">Ir al Carrito</Link>
 
                             </div>
                             :<ItemCount stock={detalle.stock} onAdd={onAdd} talleVal={talleSelec} />}

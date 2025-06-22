@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 
 const ItemCount = ({stock, onAdd, talleVal}) =>{
@@ -19,9 +20,11 @@ const ItemCount = ({stock, onAdd, talleVal}) =>{
     
     const handleClick = () =>{
         if(!talleVal){
-            alert("Selecciona un talle antes de agregar al carrito")
+            toast.error("Selecciona un talle antes de agregar al carrito", {
+            icon: "⚠️",})
             return
         }
+        toast.success(`Se han agregado ${count} productos al carrito`)
         onAdd(count)
     }
     
